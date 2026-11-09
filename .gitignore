@@ -1,0 +1,26 @@
+# Never commit credentials or personal data
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# Python and generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+
+# Local datasets, reports and backups
+data/
+uploads/
+reports/generated/
+*.csv
+*.xlsx
+*.zip

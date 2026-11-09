@@ -1,0 +1,9 @@
+.git
+.env
+.env.*
+.streamlit/secrets.toml
+*.csv
+*.xlsx
+*.ipynb
+__pycache__
+.venv
