@@ -1,116 +1,255 @@
+<div align="center">
+
 # 📊 Autonomous AI Data Analyst
 
-### Transform Raw Data into Actionable Insights with Agentic AI
+### Intelligent Data Analysis Powered by Agentic AI
 
-An intelligent, dataset-independent AI-powered analytics application built using **Google Gemini, LangGraph, Pandas, Plotly, and Streamlit**.
+**Transform raw datasets into actionable insights using Google Gemini, LangGraph, Pandas, and Streamlit.**
 
-**Project Status:** Deployed and functionally tested prototype.
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge)](https://www.langchain.com/langgraph)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+
+![Deployment](https://img.shields.io/badge/Deployment-Streamlit_Cloud-success?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Functional_Prototype-blue?style=flat-square)
+![Tests](https://img.shields.io/badge/Unit_Tests-3_Passed-brightgreen?style=flat-square)
+
+### 🚀 Try the Application
+
+**[🌐 Live Application](https://autonomous-ai-analyst-ashiwany25.streamlit.app/)** &nbsp; | &nbsp; **[💻 GitHub Repository](https://github.com/Ashiwany25/autonomous-ai-data-analyst)** &nbsp; | &nbsp; **[🐛 Report an Issue](https://github.com/Ashiwany25/autonomous-ai-data-analyst/issues)**
+
+*Upload a CSV or Excel file, let the AI agent analyze it, and explore insights through natural-language questions.*
+
+</div>
 
 ---
 
-## 🌟 About the Project
+## 📌 Overview
 
-**Autonomous AI Data Analyst** is an Agentic Generative AI application designed to automate exploratory data analysis, generate meaningful business insights, and answer natural-language questions about uploaded datasets.
+**Autonomous AI Data Analyst** is an AI-powered data analysis application that combines **large language model reasoning with deterministic Python analytical tools**.
 
-The application combines Gemini-powered analytical planning with validated Python and Pandas tools, helping users explore their data without writing analytical code.
+Traditional data analysis often requires writing code, selecting the right analytical methods, creating visualizations, and manually interpreting results.
 
-## 🚀 Key Features
+This application simplifies that process by allowing users to upload a dataset and automatically generate analytical insights.
 
-### 🤖 1. Autonomous Data Analysis
+It provides two complementary workflows:
+
+- **Autonomous Analysis:** The AI agent inspects a dataset, plans analytical tasks, executes supported operations, and generates a business intelligence report.
+- **Ask Your Data:** Users ask questions in natural language, and the AI plans and executes relevant analytical operations to produce evidence-supported answers.
+
+The application is built as a **single-agent analytical system**, using LangGraph to coordinate planning and execution.
+
+---
+
+## ✨ Key Features
+
+### 🤖 Autonomous Data Analysis
 
 - Automatic dataset profiling and column identification.
-- AI-driven analytical planning using Google Gemini.
-- LangGraph-based agent workflow orchestration.
-- Data quality checks and statistical analysis.
+- Gemini-powered analytical planning.
+- LangGraph-based agent workflow.
+- Data quality assessment.
+- Descriptive statistics and grouped analysis.
+- Date-based trend analysis for suitable datasets.
 - Interactive Plotly visualizations.
 - AI-generated business intelligence reports.
-- Downloadable analysis reports.
+- Downloadable analysis results.
 
-### 💬 2. Ask Your Data
+### 💬 Ask Your Data
 
-- Natural-language question answering.
-- Multi-step analytical planning.
-- Automatic selection of appropriate analytical tools.
-- Python-based calculations using Pandas.
-- Evidence-based responses.
+- Ask analytical questions in natural language.
+- Break complex questions into multiple supported operations.
+- Automatically select analytical tools.
+- Perform calculations with Pandas.
+- Explain results in understandable language.
+- Support questions involving categories, numeric values, and time trends.
 
-**Example Questions:**
+### 📂 Flexible Dataset Support
 
-- Which category has the highest total sales?
-- Which department has the highest average salary?
-- How have monthly sales changed over time?
-- Which category has the highest sales and average profit?
-
-### 📁 3. Dataset Support
-
-- CSV and Excel uploads.
-- Automatic identification of numeric, categorical, and date columns.
-- Dataset preview and structural information.
-- Support for different tabular-data domains.
+- Upload CSV and Excel files.
+- Preview rows and columns.
+- Inspect dataset structure.
+- Identify numerical, categorical, and date-related columns.
+- Explore datasets from different business and analytical domains.
 
 ---
 
-## 🛠️ Technology Stack
+## 🎯 Use Cases
 
-| Technology | Purpose |
+| Domain | Example Analysis |
 |---|---|
-| Python | Core programming language |
-| Google Gemini | AI planning and explanations |
-| LangGraph | Agent workflow orchestration |
-| Pandas | Data manipulation and analysis |
-| NumPy | Numerical operations |
-| Plotly | Interactive visualizations |
-| Streamlit | Web application |
-| Google Colab | Development and testing |
-| GitHub | Version control |
-| Streamlit Community Cloud | Application deployment |
+| 🛒 E-Commerce | Sales performance, revenue trends, category comparisons |
+| 💰 Finance | Expense breakdowns, financial summaries, monthly trends |
+| 🎓 Education | Student performance, subject averages, attendance analysis |
+| 📊 Business Intelligence | KPI summaries, operational insights, grouped metrics |
+| 📦 Inventory | Product quantities, category comparisons, stock summaries |
+| 🧑‍💼 HR Analytics | Department-level statistics and workforce data summaries |
+
+The application is designed for general-purpose tabular analysis, subject to the capabilities of its analytical tools.
 
 ---
 
 ## 🧠 System Architecture
 
 ```text
-             USER
-               |
-               v
-       Upload CSV / Excel
-               |
-               v
-       Dataset Profiling
-               |
-               v
-        Select AI Mode
-               |
-        +------+------+
-        |             |
-        v             v
-   Autonomous      Ask Your
-    Analysis         Data
-        |             |
-        v             v
-   Gemini Agent    Question
-    Planning       Planning
-        |             |
-        v             v
-   LangGraph       Multi-Step
-    Workflow       Tool Execution
-        |             |
-        +------+------+
-               |
-               v
-      Pandas Analytical Tools
-               |
-               v
-       Computed Results
-               |
-               v
-       Gemini Explanation
-               |
-               v
-       Insights & Reports
+                 ┌───────────────────────┐
+                 │         USER          │
+                 └───────────┬───────────┘
+                             │
+                             ▼
+                 ┌───────────────────────┐
+                 │  Streamlit Interface  │
+                 │    CSV / XLSX Input   │
+                 └───────────┬───────────┘
+                             │
+                             ▼
+                 ┌───────────────────────┐
+                 │   Dataset Profiling   │
+                 │  Schema & Data Types  │
+                 └───────────┬───────────┘
+                             │
+                   ┌─────────┴─────────┐
+                   │                   │
+                   ▼                   ▼
+        ┌──────────────────┐  ┌──────────────────┐
+        │    Autonomous    │  │   Ask Your Data  │
+        │     Analysis     │  │                  │
+        └────────┬─────────┘  └────────┬─────────┘
+                 │                     │
+                 ▼                     ▼
+        ┌──────────────────┐  ┌──────────────────┐
+        │ Gemini Analytical│  │ Gemini Question  │
+        │     Planning     │  │     Planning     │
+        └────────┬─────────┘  └────────┬─────────┘
+                 │                     │
+                 ▼                     │
+        ┌──────────────────┐           │
+        │ LangGraph Agent  │           │
+        │     Workflow     │           │
+        └────────┬─────────┘           │
+                 │                     │
+                 └─────────┬───────────┘
+                           │
+                           ▼
+                 ┌───────────────────────┐
+                 │ Validated Pandas Tools│
+                 │                       │
+                 │ • Data Quality        │
+                 │ • Summary Statistics  │
+                 │ • Categorical Analysis│
+                 │ • Grouped Analysis    │
+                 │ • Time Series         │
+                 └───────────┬───────────┘
+                             │
+                             ▼
+                 ┌───────────────────────┐
+                 │  Computed Evidence    │
+                 │  & Analytical Results │
+                 └───────────┬───────────┘
+                             │
+                             ▼
+                 ┌───────────────────────┐
+                 │ Gemini Interpretation │
+                 └───────────┬───────────┘
+                             │
+                             ▼
+                 ┌───────────────────────┐
+                 │  Insights, Charts &   │
+                 │        Reports        │
+                 └───────────────────────┘
 ```
 
-The application uses AI to plan analyses and Pandas to perform actual calculations. It does not execute arbitrary AI-generated Python code.
+### Why This Architecture?
+
+The system separates **AI reasoning** from **numerical execution**:
+
+1. **Gemini** interprets the analytical objective and plans supported operations.
+2. **LangGraph** coordinates the autonomous workflow.
+3. **Pandas** performs the actual computations.
+4. **Plotly** creates visualizations.
+5. **Streamlit** provides the interactive user interface.
+
+This design reduces dependence on unverified numerical calculations generated directly by a language model. However, AI explanations should still be reviewed for accuracy.
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology | Role |
+|---|---|
+| Python | Core application development |
+| Google Gemini 3.1 Flash-Lite | Analytical planning and natural-language explanations |
+| LangGraph | Agent orchestration and workflow management |
+| Pandas | Data loading, manipulation, and analytical execution |
+| NumPy | Numerical processing |
+| Plotly | Interactive analytical visualizations |
+| Streamlit | Web interface and interactive dashboard |
+| Google Colab | Development and experimentation |
+| Pytest | Automated analytical unit tests |
+| Git & GitHub | Version control and source code management |
+| Streamlit Community Cloud | Cloud application deployment |
+
+---
+
+## 🚀 Live Application
+
+The project is deployed on **Streamlit Community Cloud** and can be accessed through a web browser.
+
+### 🌐 [Open Autonomous AI Data Analyst](https://autonomous-ai-analyst-ashiwany25.streamlit.app/)
+
+**Live URL:** https://autonomous-ai-analyst-ashiwany25.streamlit.app/
+
+### How to Use
+
+**Step 1 — Upload a Dataset**
+
+Open the application and upload a supported CSV or Excel file.
+
+**Step 2 — Explore the Dataset**
+
+Review the preview, column details, and available analysis options.
+
+**Step 3 — Choose an Analysis Mode**
+
+Select either:
+
+- **Autonomous Analysis** for AI-guided exploration and reporting.
+- **Ask Your Data** for natural-language analytical questions.
+
+**Step 4 — View Results**
+
+Inspect analytical findings, charts, and explanations.
+
+**Step 5 — Download Reports**
+
+Download generated reports when available.
+
+---
+
+## 💬 Example Questions
+
+After uploading a suitable dataset, try asking:
+
+```text
+Which category has the highest total sales?
+```
+
+```text
+Which department has the highest average salary?
+```
+
+```text
+How have monthly sales changed over time?
+```
+
+```text
+Which product category has the highest sales
+and which has the highest average profit?
+```
+
+The application uses supported analytical operations to compute results and then generates a natural-language explanation.
 
 ---
 
@@ -118,24 +257,47 @@ The application uses AI to plan analyses and Pandas to perform actual calculatio
 
 ```text
 autonomous-ai-data-analyst/
+│
 ├── app.py
+│   └── Streamlit application interface
+│
 ├── analyst_engine.py
+│   └── Gemini planning, LangGraph workflow,
+│       and analytical tool execution
+│
 ├── requirements.txt
+│   └── Python dependencies
+│
 ├── README.md
+│   └── Project documentation
+│
 ├── .gitignore
 ├── .dockerignore
 ├── .env.example
+│
 ├── Dockerfile
+│   └── Container configuration
+│
 ├── COLAB_SETUP_AND_BACKUP.ipynb
+│   └── Colab setup and backup notebook
+│
 ├── .streamlit/
 │   └── config.toml
+│
 └── tests/
     └── test_tools.py
 ```
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Local Installation
+
+### Prerequisites
+
+- Python and pip
+- Git
+- A Google Gemini API key
+- Internet access for Gemini API requests
 
 ### 1. Clone the Repository
 
@@ -144,125 +306,217 @@ git clone https://github.com/Ashiwany25/autonomous-ai-data-analyst.git
 cd autonomous-ai-data-analyst
 ```
 
-### 2. Install Dependencies
+### 2. Create a Virtual Environment
+
+**Windows:**
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+**macOS / Linux:**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configure Gemini API
+### 4. Configure Gemini API
 
-Obtain an API key from [Google AI Studio](https://aistudio.google.com/apikey).
+Get your API key from:
 
-Create a local `.streamlit/secrets.toml` file containing:
+**[Google AI Studio — API Keys](https://aistudio.google.com/apikey)**
+
+Create a file named:
+
+```text
+.streamlit/secrets.toml
+```
+
+Add:
 
 ```toml
 GEMINI_API_KEY = "YOUR_GEMINI_API_KEY"
 ```
 
-Never commit your actual API key to GitHub.
+**Important:** Never commit `secrets.toml` or your real API key to GitHub.
 
-### 4. Run the Application
+### 5. Launch the Application
 
 ```bash
 streamlit run app.py
 ```
 
----
+The application should open locally at:
 
-## ☁️ Deployment
-
-The application has been deployed using **Streamlit Community Cloud**.
-
-**Deployment Configuration:**
-
-- GitHub repository: `Ashiwany25/autonomous-ai-data-analyst`
-- Branch: `main`
-- Main application file: `app.py`
-- API credentials: Streamlit Secrets
-
-A live application URL can be added here once confirmed for the new deployment.
+```text
+http://localhost:8501
+```
 
 ---
 
 ## 🧪 Testing & Verification
 
-The application has undergone functional testing using sample datasets.
+The application has been tested with sample tabular datasets.
 
-| Test | Result |
+### Functional Testing
+
+| Component | Status |
 |---|---|
-| Application loading | ✅ Passed |
+| Streamlit application loading | ✅ Passed |
 | CSV dataset upload | ✅ Passed |
 | Dataset preview | ✅ Passed |
-| Gemini API connection | ✅ Passed |
-| Multi-step question answering | ✅ Passed |
-| Autonomous analysis workflow | ✅ Passed |
+| Gemini API connectivity | ✅ Passed |
+| Natural-language question answering | ✅ Passed |
+| Multi-step analytical questions | ✅ Passed |
+| Autonomous analytical workflow | ✅ Passed |
 | Analytical evidence generation | ✅ Passed |
 | Business intelligence reporting | ✅ Passed |
-| Plotly visualization | ✅ Passed |
-| Report download | ✅ Passed |
+| Interactive visualizations | ✅ Passed |
+| Report downloading | ✅ Passed |
 | Basic analytical unit tests | ✅ 3 passed |
 
-These tests confirm functionality for the evaluated examples. They do not guarantee correctness across every dataset or question.
+### Run Automated Tests
+
+```bash
+python -m pytest -v tests/test_tools.py
+```
+
+**Previously recorded result:** 3 tests passed.
+
+These results demonstrate that the tested workflows function correctly on the evaluated sample data. They do not establish comprehensive production readiness or guarantee accurate results for every dataset.
 
 ---
 
-## 🔐 Security
+## ☁️ Cloud Deployment
 
-- Gemini API keys are stored outside the GitHub repository.
-- Streamlit Secrets is used for deployed API credentials.
-- `.gitignore` excludes common secret files and local datasets.
-- The application uses predefined analytical tools rather than arbitrary model-generated Python execution.
+The application is hosted on **Streamlit Community Cloud**.
 
-Users should avoid uploading confidential datasets without appropriate authorization.
+| Configuration | Value |
+|---|---|
+| Hosting Platform | Streamlit Community Cloud |
+| GitHub Repository | [Ashiwany25/autonomous-ai-data-analyst](https://github.com/Ashiwany25/autonomous-ai-data-analyst) |
+| Branch | `main` |
+| Entry Point | `app.py` |
+| Dependency File | `requirements.txt` |
+| API Configuration | Streamlit Secrets |
+
+### Deployment Steps
+
+1. Fork or clone this repository into your GitHub account.
+2. Visit [Streamlit Community Cloud](https://share.streamlit.io/).
+3. Create a new application from your repository.
+4. Select `main` and `app.py`.
+5. Add `GEMINI_API_KEY` under **Advanced settings → Secrets**.
+6. Deploy your application.
+
+The actual Gemini API key should never appear in committed source files.
+
+---
+
+## 🔐 Security & Reliability
+
+The project incorporates several precautions:
+
+- **Secret management:** Gemini credentials are supplied through Streamlit Secrets or supported environment configuration.
+- **Git exclusions:** `.gitignore` excludes common secret files, local datasets, and generated artifacts.
+- **Controlled analytical execution:** The application uses predefined Pandas analytical tools instead of executing arbitrary AI-generated Python code.
+- **Validated tool inputs:** Supported analytical requests are checked against available dataset columns and tool requirements.
+- **Bounded workflows:** The autonomous agent limits analytical execution steps.
+- **Session-based data handling:** Uploaded datasets are handled within the interactive application session.
+
+### Responsible Usage
+
+Avoid uploading confidential, regulated, or sensitive personal data unless you have the necessary permissions and have assessed the application's data-handling requirements.
+
+**Note:** The application is a functionally tested prototype, not a security-audited production service.
 
 ---
 
 ## ⚠️ Current Limitations
 
-- Supports general-purpose tabular datasets rather than every possible data format.
-- Some advanced statistical and domain-specific questions may not be supported.
-- Multi-step analytical questions have task limits.
-- AI-generated explanations may contain inaccuracies.
-- API availability depends on Gemini service limits and quotas.
-- Hosting performance depends on Streamlit Community Cloud availability.
+- Designed primarily for general-purpose tabular datasets.
+- Advanced domain-specific statistical methods may require additional tooling.
+- Some analytical questions cannot be represented by the existing tools.
+- Multi-step questions and autonomous workflows have execution limits.
+- AI-generated explanations may occasionally contain inaccuracies.
+- Gemini requests depend on API availability and quota.
+- Application performance depends on dataset size and hosting resources.
 
 ---
 
-## 🔮 Future Enhancements
+## 🗺️ Development Roadmap
 
-### ✅ Completed Features
+### ✅ Implemented
 
-- ✅ Universal dataset profiling
-- ✅ Autonomous analytical planning
-- ✅ LangGraph agent workflow
-- ✅ Multi-step question answering
-- ✅ Interactive Streamlit dashboard
-- ✅ CSV and Excel support
-- ✅ Cloud deployment
-- ✅ Basic functional testing
+- ✅ CSV and Excel upload support
+- ✅ Dataset profiling and structural inspection
+- ✅ Gemini-powered analytical planning
+- ✅ LangGraph-based autonomous workflow
+- ✅ Predefined Pandas analytical tools
+- ✅ Multi-step natural-language question answering
+- ✅ Interactive Plotly visualizations
+- ✅ Business intelligence report generation
+- ✅ Downloadable analysis reports
+- ✅ Streamlit Community Cloud deployment
+- ✅ Initial functional and unit testing
 
-### 🚀 Planned Improvements
+### 🚧 Planned Improvements
 
-- 🔲 Advanced visualization options
-- 🔲 Automatic analytical error recovery
-- 🔲 Stronger numerical verification
-- 🔲 Automated PDF report generation
-- 🔲 Improved large-dataset support
+- 🔲 Additional analytical tools and statistical methods
+- 🔲 Stronger numerical result verification
+- 🔲 Improved analytical error recovery
+- 🔲 Enhanced chart selection and customization
+- 🔲 PDF report generation
+- 🔲 Performance optimization for larger datasets
 - 🔲 Persistent analysis history
+- 🔲 Expanded automated testing and edge-case coverage
 
 ---
 
-## 🎯 Project Objective
+## 🤝 Contributing
 
-To make data analysis more accessible by building an intelligent AI assistant capable of understanding datasets, planning analytical operations, executing computations, and communicating meaningful insights in natural language.
+Contributions, bug reports, and enhancement suggestions are welcome.
+
+If you would like to contribute:
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Add or update tests where appropriate.
+5. Open a pull request describing the changes.
+
+For bugs or feature ideas, use the [GitHub Issues page](https://github.com/Ashiwany25/autonomous-ai-data-analyst/issues).
+
+---
+
+## 👨‍💻 Developer
+
+**Ashiwany**
+
+*Aspiring Data Analyst | AI/ML Enthusiast | Software Developer*
+
+Interested in building practical solutions using **Artificial Intelligence, Data Analytics, Machine Learning, and modern Python frameworks**.
+
+**[GitHub Profile](https://github.com/Ashiwany25)** | **[LinkedIn](https://www.linkedin.com/in/ashiwany-kumar-b30b20325/)** | **[Live Project](https://autonomous-ai-analyst-ashiwany25.streamlit.app/)**
 
 ---
 
 <div align="center">
 
-### ⭐ Built with Python, Gemini, LangGraph & Streamlit
+### ⭐ If you find this project useful, consider giving it a star!
 
-**Turning data into insights, one question at a time.**
+**Built with Python, Google Gemini, LangGraph, Pandas & Streamlit**
+
+*Turning data into insights, one question at a time.*
+
+**[🚀 Explore Live Application](https://autonomous-ai-analyst-ashiwany25.streamlit.app/)** | **[📂 View Source Code](https://github.com/Ashiwany25/autonomous-ai-data-analyst)**
 
 </div>
