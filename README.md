@@ -496,6 +496,7 @@ If you would like to contribute:
 For bugs or feature ideas, use the [GitHub Issues page](https://github.com/Ashiwany25/autonomous-ai-data-analyst/issues).
 
 ---
+<div align="center">
 
 ## 👨‍💻 Developer
 
